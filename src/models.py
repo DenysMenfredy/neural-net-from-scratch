@@ -57,6 +57,14 @@ class NonLinear:
 
 
     def fit(self, x: np.ndarray, y: np.ndarray, lr: float, num_epochs: int):
+        """
+            This method is used to train the model on the training data.
+            - x: training data
+            - y: training labels
+            - lr: learning rate
+            - num_epochs: number of epochs to train
+        """
+        
         for epoch in range(num_epochs):
             y_pred = self(x)
             loss_value = self.loss(y_pred, y)

@@ -2,7 +2,12 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 
-def plot_3d(x, y, y_pred=None):  
+def plot_3d(x, y, y_pred=None):
+  """
+    This function plots the 3D graph of the true data points
+    and the predicted ones.
+  """ 
+   
   fig = plt.figure()
   ax = fig.add_subplot(111, projection='3d')
   ax.scatter(x[:, 0], x[:, 1], y, label='underlying function')
